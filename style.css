@@ -883,9 +883,12 @@ body {
   column-gap: 12px; 
   font-size: 10px; /* Increased from 4.5px so it's perfectly crisp! */
   line-height: 1.5; 
-  color: #444;
+  color: #151414;
   text-align: left; 
   margin-top: 6px;
+  color: rgb(43, 221, 212) ;
+  font-weight: 400;
+    
 }
 .photo-placeholder{
   height: 80px;
@@ -959,26 +962,30 @@ body {
 .gallery-container {
   display: flex;
   width: 100%;
-  height: 450px;
-  gap: 15px; /* Spacing between the closed strips */
+  
+  /* INCREASED: Changed from 450px to 600px to perfectly fit rectangular images! */
+  height: 600px; 
+  
+  gap: 15px; 
 }
-
 /* Individual Image Panels */
 .panel {
   background-size: cover;
-  background-position: center;
+  
+  /* Change this from 'center' to 'top center' so it stops chopping off heads! */
+  background-position: top center; 
+  
   background-repeat: no-repeat;
   height: 100%;
-  border-radius: 50px; /* The extreme curve from the video */
+  border-radius: 50px; 
   color: #fff;
   cursor: pointer;
-  flex: 0.7; /* The narrow width when closed */
+  flex: 0.7; 
   position: relative;
   transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-
 /* The MAGIC: Expanding the active panel */
 .panel.active {
   flex: 5; /* Stretches wide to fill the space */
@@ -1181,7 +1188,9 @@ body {
   .text-columns {
     column-count: 1; /* Drops from 2 columns to 1 for readability */
     font-size: 12px; /* Bumps up the font size for small screens */
+    
   }
+  
 
   .chat-bubbles p {
     font-size: 12px; /* Makes chat bubbles easier to read on mobile */
@@ -1189,8 +1198,10 @@ body {
 
   /* --- 2. The Vault Accordion (Vertical Stack) --- */
   .gallery-container {
-    flex-direction: column; /* Flips the strips from horizontal to vertical */
-    height: 65vh; 
+    flex-direction: column; 
+    
+    /* INCREASED: Changed from 65vh to 75vh to give the stacked images more room on phones */
+    height: 75vh; 
   }
   
   .panel {
