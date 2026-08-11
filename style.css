@@ -1293,17 +1293,17 @@ body {
     right: 15px;
     padding: 8px 15px;
   }
-  
+   .text h3 {
+    font-size: 1.1rem;
+  }
+
   .icon {
     width: 35px;
     height: 35px;
     font-size: 1rem;
   }
 
-  .text h3 {
-    font-size: 1.1rem;
-  }
-
+ 
   /* --- 3. The Mac Dock --- */
   .dock-container {
     bottom: 1rem; /* Lowers it slightly on the screen */
